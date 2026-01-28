@@ -1,5 +1,6 @@
 import streamlit as st
-import pipeline_functions as pf
+import pandas as pd
+import pipeline_function as pf
 
 st.set_page_config(page_title="Top Apps Pipeline", layout="wide")
 st.title("📊 Top Apps Pipeline (Dynamic Filters)")
@@ -76,3 +77,4 @@ if st.button("▶ Run pipeline"):
     st.success("Pipeline completed!")
     st.write(f"Returned rows: {len(top_apps_data)}")
     st.dataframe(top_apps_data, use_container_width=True)
+
